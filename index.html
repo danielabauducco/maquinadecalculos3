@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Máquina de las Transformaciones</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+  background:#dff7fb; font-family:Arial,sans-serif; color:#102957;
+}
+main{width:min(900px,94vw); text-align:center}
+h1{
+  margin:0 0 20px; font-size:clamp(26px,5vw,48px);
+  background:#173b47; color:white; padding:18px 24px; border-radius:24px;
+}
+.machine{
+  background:#b8e7ef; border:8px solid #173b47; border-radius:30px;
+  padding:30px; box-shadow:0 10px 0 #0d6873;
+}
+.row{display:flex; justify-content:center; align-items:center; gap:10px; margin:20px 0}
+.box{
+  width:90px; height:90px; background:#fffdf8; border:5px solid #168d96;
+  border-radius:16px; display:flex; align-items:center; justify-content:center;
+  font-size:48px; font-weight:bold;
+}
+.op{font-size:55px; font-weight:bold; color:#f58b22}
+button{
+  border:0; border-radius:30px; padding:18px 35px; font-size:22px;
+  font-weight:bold; cursor:pointer; background:#f3a13a; color:white;
+  box-shadow:0 6px 0 #c96816;
+}
+button:active{transform:translateY(4px);box-shadow:0 2px 0 #c96816}
+#resultado{margin-top:20px;font-size:24px;font-weight:bold;min-height:35px}
+</style>
+</head>
+<body>
+<main>
+<h1>🚀 MÁQUINA DE LAS TRANSFORMACIONES</h1>
+<div class="machine">
+  <div class="row">
+    <div class="box" id="a">1</div>
+    <div class="box" id="b">2</div>
+    <div class="box" id="c">3</div>
+    <div class="op">+</div>
+    <div class="box" id="d">1</div>
+    <div class="box" id="e">2</div>
+    <div class="box" id="f">3</div>
+  </div>
+  <button id="girar" type="button">GIRAR LA MÁQUINA 🚀</button>
+  <div id="resultado">TOCÁ EL BOTÓN PARA COMENZAR</div>
+</div>
+</main>
+<script>
+document.getElementById("girar").addEventListener("click", function(){
+  document.getElementById("a").textContent="1";
+  document.getElementById("b").textContent="4";
+  document.getElementById("c").textContent="2";
+  document.getElementById("d").textContent="0";
+  document.getElementById("e").textContent="2";
+  document.getElementById("f").textContent="3";
+  document.getElementById("resultado").textContent="¡LA MÁQUINA ESTÁ FUNCIONANDO!";
+});
+</script>
+</body>
+</html>
